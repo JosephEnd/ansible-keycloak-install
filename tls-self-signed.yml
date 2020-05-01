@@ -1,0 +1,19 @@
+---
+
+- hosts: all
+  roles:
+    - keycloak
+  vars:
+    # Use the following command to create a new encrypted password, then
+    # update the associated value below:
+    #
+    #   ansible-vault encrypt_string --stdin-name 'keycloak_admin_password'
+    #
+    keycloak_admin_user: jeez
+    keycloak_admin_password: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          32616436306139623235636334623437613036303063346434633635626138303861343961643261
+          3232343234323435363230386532636564663234633838660a663132653761636565343737353337
+          32353433636166393834393361653831623038346333383661666362393733636365326565383834
+          6134306665376632640a636333666139366431653365353364326630323136653138323438663230
+          3735

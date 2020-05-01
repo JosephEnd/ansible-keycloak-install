@@ -1,0 +1,2 @@
+
+keycloak ansible_host=keycloak.acme.xyz ansible_port=20723 ansible_connection=ssh ansible_user=youruser ansible_ssh_pass="yourpass"
